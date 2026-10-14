@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HotVideo</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #101010;
+      color: white;
+    }
+    header {
+      background: #202020;
+      padding: 18px;
+      text-align: center;
+      border-bottom: 2px solid #e91e63;
+    }
+    header h1 { margin: 0; color: #ff4081; }
+    .notice {
+      margin: 18px;
+      padding: 16px;
+      background: #292929;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .notice button {
+      padding: 12px 24px;
+      background: #e91e63;
+      color: white;
+      border: 0;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    main { padding: 18px; }
+    h2 { font-size: 20px; }
+    .empty {
+      padding: 30px 12px;
+      background: #202020;
+      border-radius: 10px;
+      text-align: center;
+      color: #ccc;
+    }
+    footer {
+      padding: 24px;
+      text-align: center;
+      color: #aaa;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HotVideo</h1>
+    <p>Your Video Platform</p>
+  </header>
+
+  <section class="notice">
+    <h2>18+ Adult Website</h2>
+    <p>এই ওয়েবসাইটটি শুধুমাত্র ১৮ বছর বা তার বেশি বয়সীদের জন্য।</p>
+    <button onclick="enterSite()">প্রবেশ করুন</button>
+  </section>
+
+  <main id="content" hidden>
+    <h2>সর্বশেষ ভিডিও</h2>
+    <div class="empty">
+      এখনো কোনো ভিডিও যোগ করা হয়নি।
+    </div>
+  </main>
+
+  <footer>
+    © 2026 HotVideo
+  </footer>
+
+  <script>
+    function enterSite() {
+      if (confirm("আপনি কি ১৮ বছর বা তার বেশি বয়সী?")) {
+        document.getElementById("content").hidden = false;
+        document.querySelector(".notice").hidden = true;
+      }
+    }
+  </script>
+</body>
+</html>
